@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, TouchableOpacity} from 'react-native';
+import {styles} from './styles';
 
 interface ButtonProps {
   title: string;
@@ -8,15 +9,8 @@ interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   return (
-    <TouchableOpacity
-      style={{
-        backgroundColor: 'red',
-        padding: 10,
-        borderRadius: 10,
-        alignItems: 'center',
-      }}
-      onPress={props.onPress}>
-      <Text style={{color: 'white'}}>{props.title}</Text>
+    <TouchableOpacity style={styles.container} onPress={props.onPress}>
+      <Text style={styles.text}>{props.title}</Text>
     </TouchableOpacity>
   );
 };

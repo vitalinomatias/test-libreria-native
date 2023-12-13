@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextInput} from 'react-native';
-
+import {styles} from './styles';
 interface InputProps {
   placeholder?: string;
   value: string;
@@ -13,12 +13,7 @@ const Input = (props: InputProps) => {
       placeholder={props.placeholder}
       value={props.value}
       onChangeText={props.onChange}
-      style={{
-        borderColor: 'gray',
-        borderWidth: 1,
-        padding: 10,
-        borderRadius: 5,
-      }}
+      style={styles.input}
     />
   );
 };
